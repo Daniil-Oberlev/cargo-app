@@ -19,7 +19,7 @@
     "noFallthroughCasesInSwitch": true,
 
     "paths": {
-      "@/*": ["./app/*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"],
