@@ -1,0 +1,9 @@
+*                    text eol=lf
+
+*.json               diff=json
+*.yaml               diff
+*.yml                diff
+
+.gitattributes       export-ignore
+.gitignore           export-ignore
+
