@@ -14,11 +14,11 @@ interface CloneConfirmationDialogProps {
   onConfirm: () => void;
 }
 
-export function CloneConfirmationDialog({
+export const CloneConfirmationDialog = ({
   open,
   onOpenChange,
   onConfirm,
-}: CloneConfirmationDialogProps) {
+}: CloneConfirmationDialogProps) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className='sm:max-w-md'>
@@ -38,4 +38,4 @@ export function CloneConfirmationDialog({
       </DialogContent>
     </Dialog>
   );
-}
+};

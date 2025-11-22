@@ -23,7 +23,7 @@ interface CargoFormProps {
   initialData?: CargoFormData | null;
 }
 
-export function CargoForm({ onDataChange, initialData }: CargoFormProps) {
+export const CargoForm = ({ onDataChange, initialData }: CargoFormProps) => {
   const autocompleteData = useAppStore((state) => state.autocomplete);
 
   const [formData, setFormData] = useState<CargoFormData>(() => {
@@ -331,4 +331,4 @@ export function CargoForm({ onDataChange, initialData }: CargoFormProps) {
       </div>
     </div>
   );
-}
+};

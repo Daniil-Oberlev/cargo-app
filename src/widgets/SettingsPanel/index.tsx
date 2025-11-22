@@ -6,7 +6,7 @@ import { Label } from '@/shared/components/ui/label';
 import { Switch } from '@/shared/components/ui/switch';
 import { getAppSettings, saveAppSettings } from '@/shared/lib/storage';
 
-export function SettingsPanel() {
+export const SettingsPanel = () => {
   const [settings, setSettings] = useState<AppSettings>(getAppSettings());
 
   const updateSetting = (key: keyof AppSettings, value: boolean) => {
@@ -48,4 +48,4 @@ export function SettingsPanel() {
       </div>
     </div>
   );
-}
+};

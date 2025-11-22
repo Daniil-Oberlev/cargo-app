@@ -30,7 +30,7 @@ const fieldLabels: Record<keyof AutocompleteData, string> = {
   directorNames: 'ФИО директоров',
 };
 
-export function DatabasePanel() {
+export const DatabasePanel = () => {
   const autocompleteData = useAppStore((state) => state.autocomplete);
 
   const [newValues, setNewValues] = useState<
@@ -123,4 +123,4 @@ export function DatabasePanel() {
       })}
     </div>
   );
-}
+};
