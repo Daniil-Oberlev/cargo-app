@@ -14,14 +14,14 @@ interface AutocompleteInputProps {
   id?: string;
 }
 
-export function AutocompleteInput({
+export const AutocompleteInput = ({
   value,
   onChange,
   suggestions,
   placeholder,
   className,
   id,
-}: AutocompleteInputProps) {
+}: AutocompleteInputProps) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -114,4 +114,4 @@ export function AutocompleteInput({
       )}
     </div>
   );
-}
+};

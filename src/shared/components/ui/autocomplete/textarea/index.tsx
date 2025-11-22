@@ -14,14 +14,14 @@ interface AutocompleteTextareaProps {
   id?: string;
 }
 
-export function AutocompleteTextarea({
+export const AutocompleteTextarea = ({
   value,
   onChange,
   suggestions,
   placeholder,
   className,
   id,
-}: AutocompleteTextareaProps) {
+}: AutocompleteTextareaProps) => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -114,4 +114,4 @@ export function AutocompleteTextarea({
       )}
     </div>
   );
-}
+};
