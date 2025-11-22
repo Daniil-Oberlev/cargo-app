@@ -38,8 +38,8 @@ export function SettingsPanel() {
             </p>
           </div>
           <Switch
-            id='show-clone-warning'
             checked={settings.showCloneWarning}
+            id='show-clone-warning'
             onCheckedChange={(checked) =>
               updateSetting('showCloneWarning', checked)
             }

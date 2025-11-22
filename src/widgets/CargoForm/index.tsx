@@ -73,7 +73,7 @@ export function CargoForm({ onDataChange, initialData }: CargoFormProps) {
         <div>
           <Label htmlFor='shipper'>1. Реквизиты грузоотправителя</Label>
           <AutocompleteTextarea
-            className='mt-2 min-h-[80px]'
+            className='mt-2 min-h-20'
             id='shipper'
             placeholder='Введите реквизиты грузоотправителя'
             suggestions={autocompleteData.shippers}
@@ -86,7 +86,7 @@ export function CargoForm({ onDataChange, initialData }: CargoFormProps) {
             1a. Реквизиты заказчика услуг по организации перевозки груза
           </Label>
           <AutocompleteTextarea
-            className='mt-2 min-h-[80px]'
+            className='mt-2 min-h-20'
             id='customer'
             placeholder='Введите реквизиты заказчика'
             suggestions={autocompleteData.customers}
@@ -100,7 +100,7 @@ export function CargoForm({ onDataChange, initialData }: CargoFormProps) {
         <div>
           <Label htmlFor='receiver'>2. Реквизиты грузополучателя</Label>
           <AutocompleteTextarea
-            className='mt-2 min-h-[80px]'
+            className='mt-2 min-h-20'
             id='receiver'
             placeholder='Введите реквизиты грузополучателя'
             suggestions={autocompleteData.receivers}
@@ -165,7 +165,7 @@ export function CargoForm({ onDataChange, initialData }: CargoFormProps) {
         <div>
           <Label htmlFor='route'>5. Маршрут перевозки</Label>
           <AutocompleteTextarea
-            className='mt-2 min-h-[80px]'
+            className='mt-2 min-h-20'
             id='route'
             placeholder='Введите маршрут перевозки'
             suggestions={autocompleteData.routes}
@@ -179,7 +179,7 @@ export function CargoForm({ onDataChange, initialData }: CargoFormProps) {
         <div>
           <Label htmlFor='carrier'>6. Перевозчик</Label>
           <AutocompleteTextarea
-            className='mt-2 min-h-[80px]'
+            className='mt-2 min-h-20'
             id='carrier'
             placeholder='Введите данные перевозчика'
             suggestions={autocompleteData.carriers}
@@ -298,7 +298,7 @@ export function CargoForm({ onDataChange, initialData }: CargoFormProps) {
         <div>
           <Label htmlFor='carrierDetails'>12. Реквизиты перевозчика</Label>
           <AutocompleteTextarea
-            className='mt-2 min-h-[80px]'
+            className='mt-2 min-h-20'
             id='carrierDetails'
             placeholder='Введите реквизиты перевозчика'
             suggestions={autocompleteData.carrierDetails}
@@ -309,7 +309,7 @@ export function CargoForm({ onDataChange, initialData }: CargoFormProps) {
         <div>
           <Label htmlFor='payerDetails'>12a. Реквизиты плательщика</Label>
           <AutocompleteTextarea
-            className='mt-2 min-h-[80px]'
+            className='mt-2 min-h-20'
             id='payerDetails'
             placeholder='Введите реквизиты плательщика'
             suggestions={autocompleteData.payerDetails}

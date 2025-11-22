@@ -79,6 +79,8 @@ export function DatabasePanel() {
 
             <div className='flex gap-2'>
               <Input
+                className='flex-1'
+                placeholder='Введите значение и нажмите Enter или Добавить'
                 value={newValues[fieldKey] ?? ''}
                 onChange={(e) =>
                   setNewValues((prev) => ({
@@ -87,13 +89,11 @@ export function DatabasePanel() {
                   }))
                 }
                 onKeyDown={(e) => handleKeyPress(e, fieldKey)}
-                placeholder='Введите значение и нажмите Enter или Добавить'
-                className='flex-1'
               />
               <Button
-                onClick={() => handleAdd(fieldKey)}
-                variant='outline'
                 className='shrink-0'
+                variant='outline'
+                onClick={() => handleAdd(fieldKey)}
               >
                 Добавить
               </Button>
@@ -108,9 +108,9 @@ export function DatabasePanel() {
                   >
                     <span className='text-foreground'>{item}</span>
                     <button
-                      onClick={() => handleRemove(fieldKey, item)}
-                      className='text-muted-foreground hover:text-foreground ml-1'
                       aria-label='Удалить'
+                      className='text-muted-foreground hover:text-foreground ml-1'
+                      onClick={() => handleRemove(fieldKey, item)}
                     >
                       <X className='h-3 w-3' />
                     </button>
