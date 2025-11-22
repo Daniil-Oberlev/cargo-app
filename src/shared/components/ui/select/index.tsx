@@ -4,32 +4,32 @@ import * as React from 'react';
 
 import { cn } from '@/shared/lib/utils';
 
-function Select({
+export const Select = ({
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Root>) {
+}: React.ComponentProps<typeof SelectPrimitive.Root>) => {
   return <SelectPrimitive.Root data-slot='select' {...props} />;
-}
+};
 
-function SelectGroup({
+export const SelectGroup = ({
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Group>) {
+}: React.ComponentProps<typeof SelectPrimitive.Group>) => {
   return <SelectPrimitive.Group data-slot='select-group' {...props} />;
-}
+};
 
-function SelectValue({
+export const SelectValue = ({
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Value>) {
+}: React.ComponentProps<typeof SelectPrimitive.Value>) => {
   return <SelectPrimitive.Value data-slot='select-value' {...props} />;
-}
+};
 
-function SelectTrigger({
+export const SelectTrigger = ({
   className,
   size = 'default',
   children,
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.Trigger> & {
   size?: 'sm' | 'default';
-}) {
+}) => {
   return (
     <SelectPrimitive.Trigger
       data-slot='select-trigger'
@@ -46,15 +46,15 @@ function SelectTrigger({
       </SelectPrimitive.Icon>
     </SelectPrimitive.Trigger>
   );
-}
+};
 
-function SelectContent({
+export const SelectContent = ({
   className,
   children,
   position = 'popper',
   align = 'center',
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Content>) {
+}: React.ComponentProps<typeof SelectPrimitive.Content>) => {
   return (
     <SelectPrimitive.Portal>
       <SelectPrimitive.Content
@@ -83,12 +83,12 @@ function SelectContent({
       </SelectPrimitive.Content>
     </SelectPrimitive.Portal>
   );
-}
+};
 
-function SelectLabel({
+export const SelectLabel = ({
   className,
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Label>) {
+}: React.ComponentProps<typeof SelectPrimitive.Label>) => {
   return (
     <SelectPrimitive.Label
       data-slot='select-label'
@@ -96,13 +96,13 @@ function SelectLabel({
       {...props}
     />
   );
-}
+};
 
-function SelectItem({
+export const SelectItem = ({
   className,
   children,
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Item>) {
+}: React.ComponentProps<typeof SelectPrimitive.Item>) => {
   return (
     <SelectPrimitive.Item
       data-slot='select-item'
@@ -120,12 +120,12 @@ function SelectItem({
       <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
     </SelectPrimitive.Item>
   );
-}
+};
 
-function SelectSeparator({
+export const SelectSeparator = ({
   className,
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.Separator>) {
+}: React.ComponentProps<typeof SelectPrimitive.Separator>) => {
   return (
     <SelectPrimitive.Separator
       data-slot='select-separator'
@@ -133,12 +133,12 @@ function SelectSeparator({
       {...props}
     />
   );
-}
+};
 
-function SelectScrollUpButton({
+export const SelectScrollUpButton = ({
   className,
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.ScrollUpButton>) {
+}: React.ComponentProps<typeof SelectPrimitive.ScrollUpButton>) => {
   return (
     <SelectPrimitive.ScrollUpButton
       data-slot='select-scroll-up-button'
@@ -151,12 +151,12 @@ function SelectScrollUpButton({
       <ChevronUpIcon className='size-4' />
     </SelectPrimitive.ScrollUpButton>
   );
-}
+};
 
-function SelectScrollDownButton({
+export const SelectScrollDownButton = ({
   className,
   ...props
-}: React.ComponentProps<typeof SelectPrimitive.ScrollDownButton>) {
+}: React.ComponentProps<typeof SelectPrimitive.ScrollDownButton>) => {
   return (
     <SelectPrimitive.ScrollDownButton
       data-slot='select-scroll-down-button'
@@ -169,17 +169,4 @@ function SelectScrollDownButton({
       <ChevronDownIcon className='size-4' />
     </SelectPrimitive.ScrollDownButton>
   );
-}
-
-export {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectScrollDownButton,
-  SelectScrollUpButton,
-  SelectSeparator,
-  SelectTrigger,
-  SelectValue,
 };
