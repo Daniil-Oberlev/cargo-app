@@ -3,10 +3,10 @@ import * as React from 'react';
 
 import { cn } from '@/shared/lib/utils';
 
-function Label({
+export const Label = ({
   className,
   ...props
-}: React.ComponentProps<typeof LabelPrimitive.Root>) {
+}: React.ComponentProps<typeof LabelPrimitive.Root>) => {
   return (
     <LabelPrimitive.Root
       data-slot='label'
@@ -17,6 +17,4 @@ function Label({
       {...props}
     />
   );
-}
-
-export { Label };
+};
